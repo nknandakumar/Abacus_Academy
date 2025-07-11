@@ -1,62 +1,53 @@
-import { Brain, Zap, ShieldCheck, GraduationCap, Ear, Lightbulb } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-
-const benefits = [
-  {
-    icon: <Brain className="w-12 h-12 mb-4 text-accent" />,
-    title: 'Enhances Memory & Concentration',
-    description: 'Sharpens focus and improves information retention.',
-  },
-  {
-    icon: <Zap className="w-12 h-12 mb-4 text-accent" />,
-    title: 'Boosts Mental Calculation Speed',
-    description: 'Increases speed and accuracy in math.',
-  },
-  {
-    icon: <ShieldCheck className="w-12 h-12 mb-4 text-accent" />,
-    title: 'Builds Confidence & Self-Discipline',
-    description: 'Fosters a can-do attitude and strong work ethic.',
-  },
-  {
-    icon: <GraduationCap className="w-12 h-12 mb-4 text-accent" />,
-    title: 'Improves Academic Performance',
-    description: 'Positive effects on overall school grades.',
-  },
-  {
-    icon: <Ear className="w-12 h-12 mb-4 text-accent" />,
-    title: 'Sharpens Observation & Listening',
-    description: 'Develops key skills for learning and life.',
-  },
-  {
-    icon: <Lightbulb className="w-12 h-12 mb-4 text-accent" />,
-    title: 'Develops Logical & Visualization',
-    description: 'Enhances problem-solving and creative thinking.',
-  },
-];
+import { Brain, Zap, ShieldCheck, GraduationCap, Ear, Lightbulb, ArrowRight, Star } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export function Benefits() {
   return (
     <section id="benefits" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Why Abacus?</div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Benefits for Your Child</h2>
-          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Abacus training offers a wealth of cognitive benefits that extend far beyond the classroom, shaping well-rounded individuals.
-          </p>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.map((benefit) => (
-            <Card key={benefit.title} className="p-6 text-center border-2 border-transparent hover:border-accent hover:shadow-2xl transition-all duration-300">
-              <CardHeader className="items-center p-0">
-                {benefit.icon}
-                <CardTitle className="mt-2 text-xl">{benefit.title}</CardTitle>
-              </CardHeader>
-              <CardDescription className="mt-2 text-base">
-                {benefit.description}
-              </CardDescription>
-            </Card>
-          ))}
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 space-y-6">
+                 <h2 className="text-3xl font-extrabold tracking-tighter sm:text-5xl">Experience Learning Like Never Before</h2>
+                 <p className="text-muted-foreground md:text-xl">
+                    Discover Personalized, AI-Powered Learning That Prepares Students for Success in The Real World.
+                 </p>
+                 <Button size="lg" asChild>
+                    <Link href="#contact">Start Your Journey</Link>
+                 </Button>
+            </div>
+            <div className="lg:col-span-7">
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="col-span-2">
+                        <Card className="rounded-3xl overflow-hidden p-6 relative bg-card">
+                             <Image
+                                src="https://placehold.co/600x400.png"
+                                alt="Personalized Learning Paths"
+                                width={600}
+                                height={400}
+                                className="absolute inset-0 w-full h-full object-cover rounded-3xl brightness-75"
+                                data-ai-hint="student headphones"
+                             />
+                            <CardContent className="relative z-10 text-white">
+                                <h3 className="text-2xl font-bold">Personalized Learning Paths</h3>
+                                <p>AI-driven courses to your unique learning style.</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <Card className="rounded-3xl p-6 bg-[#F2F8DE]">
+                        <Star className="w-8 h-8 text-lime-600 mb-4"/>
+                        <h3 className="text-xl font-bold">Earn While You Learn</h3>
+                        <p className="text-muted-foreground mt-2">Accumulate scholarship funds as you progress.</p>
+                    </Card>
+                     <Card className="rounded-3xl p-6 bg-[#EBE4FF]">
+                        <ShieldCheck className="w-8 h-8 text-purple-600 mb-4"/>
+                        <h3 className="text-xl font-bold">Verified Credentials</h3>
+                        <p className="text-muted-foreground mt-2">Secure blockchain certificates for your achievements.</p>
+                    </Card>
+                </div>
+            </div>
         </div>
       </div>
     </section>

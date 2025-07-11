@@ -1,69 +1,42 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '../ui/badge';
-import { FileText, Award, BrainCircuit, CheckCircle } from 'lucide-react';
+import { FileText, Award, BrainCircuit, CheckCircle, Brain, History, Atom, Laptop, PenTool, BarChart } from 'lucide-react';
 
-const programHighlights = [
-  {
-    icon: <BrainCircuit className="w-8 h-8 text-primary" />,
-    title: 'Abacus Levels 0–8',
-    description: 'Step-by-step finger abacus training & mental visualization.',
-  },
-  {
-    icon: <Award className="w-8 h-8 text-primary" />,
-    title: 'Finger Abacus Championships',
-    description: 'Coaching for regional and national exams.',
-  },
-  {
-    icon: <BrainCircuit className="w-8 h-8 text-primary" />,
-    title: 'Vedic Maths',
-    description: 'Ancient speed math techniques for accuracy & fun.',
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8 text-primary" />,
-    title: 'Certification Exams',
-    description: 'Periodic assessments with official certificates.',
-  },
-];
+
+const subjects = [
+    { name: 'All Subjects', icon: <BarChart/>, color: 'bg-red-100' },
+    { name: 'English', icon: <PenTool/>, color: 'bg-purple-100' },
+    { name: 'Business', icon: <Brain/>, color: 'bg-lime-100' },
+    { name: 'History', icon: <History/>, color: 'bg-blue-100' },
+    { name: 'Geography', icon: <Award/>, color: 'bg-orange-100' },
+    { name: 'Chemistry', icon: <Atom/>, color: 'bg-green-100' },
+    { name: 'Physics', icon: <FileText/>, color: 'bg-teal-100' },
+    { name: 'Engineering', icon: <Laptop/>, color: 'bg-indigo-100' },
+    { name: 'Medicine', icon: <CheckCircle/>, color: 'bg-pink-100' },
+    { name: 'Computers', icon: <BarChart/>, color: 'bg-sky-100' },
+    { name: 'Mathematics', icon: <BrainCircuit/>, color: 'bg-purple-100' },
+    { name: 'Arts', icon: <PenTool/>, color: 'bg-lime-100' },
+]
 
 export function Courses() {
   return (
-    <section id="courses" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+    <section id="courses" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Courses & Championships</div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Program Highlights</h2>
-          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            We offer a comprehensive curriculum designed for mastery and competitive success.
-          </p>
+          <h2 className="text-3xl font-extrabold tracking-tighter sm:text-5xl">Where Questions Meet Answers</h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-12">
-          {programHighlights.map((item) => (
-            <Card key={item.title} className="text-center p-6 border-2 border-transparent hover:border-primary transition-all duration-300">
-              <CardHeader className="items-center p-0 mb-4">
-                {item.icon}
-                <CardTitle className="mt-4">{item.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{item.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="mx-auto max-w-3xl text-center space-y-6">
-           <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl font-headline">Admission Process & Documents</h3>
-           <p className="text-muted-foreground md:text-lg/relaxed">
-            Complete the enquiry & admission form below. Visit any branch with the required documents and schedule your free level assessment.
-           </p>
-           <div className="flex justify-center flex-wrap gap-4">
-             <Badge variant="secondary" className="text-base py-1 px-3">Recent passport-size photo</Badge>
-             <Badge variant="secondary" className="text-base py-1 px-3">Aadhar card copy</Badge>
-             <Badge variant="secondary" className="text-base py-1 px-3">Birth certificate copy</Badge>
-           </div>
-           <Button asChild>
-             <Link href="#contact">View Detailed Courses & Exam Details</Link>
-           </Button>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {subjects.map(subject => (
+                <Card key={subject.name} className="p-4 flex flex-col items-center justify-center rounded-2xl border-0 shadow-sm hover:shadow-lg transition-shadow">
+                    <div className={`p-3 rounded-full ${subject.color} mb-2`}>
+                        {React.cloneElement(subject.icon, {className: "w-6 h-6"})}
+                    </div>
+                    <p className="font-semibold text-sm text-center">{subject.name}</p>
+                </Card>
+            ))}
         </div>
       </div>
     </section>
