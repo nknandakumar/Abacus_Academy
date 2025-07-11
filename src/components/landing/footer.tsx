@@ -1,8 +1,17 @@
+
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { School, Facebook, Twitter, Instagram, Linkedin, X } from 'lucide-react';
+import { School, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export function Footer() {
-  const year = new Date().getFullYear();
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="w-full py-8 border-t bg-background">
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -12,7 +21,7 @@ export function Footer() {
             <span className="font-extrabold text-lg">Creative Abacus</span>
           </Link>
           <p className="text-muted-foreground text-sm max-w-xs">
-           © 2025 Creative Abacus Academy – The Best Abacus Center in Shivamogga
+            Empowering Students with Personalized, Innovative Learning Designed to Build Essential Skills for Future Success.
           </p>
         </div>
         
@@ -36,7 +45,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mt-8 pt-8 border-t flex justify-between items-center text-sm text-muted-foreground">
-        <p>Crafted by [Your Name/Agency], 15+ Years in Web Copywriting & SEO</p>
+        <p>© {year} Creative Abacus Academy. All Rights Reserved.</p>
         <div className="flex space-x-4">
             <Link href="#" aria-label="Facebook">
                 <Facebook className="h-6 w-6 text-muted-foreground hover:text-primary" />
