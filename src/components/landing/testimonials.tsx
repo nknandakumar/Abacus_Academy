@@ -18,9 +18,9 @@ const testimonials = [
     image: 'https://placehold.co/100x100.png',
     text: 'The instructors are amazing, and the results are visible!',
   },
-  {
-    name: 'Emily R.',
-    role: 'Parent of a 9-year-old',
+   {
+    name: 'Parent of a 9-year-old',
+    role: 'Emily R.',
     avatar: 'ER',
     image: 'https://placehold.co/100x100.png',
     text: "Creative Abacus Academy provides a nurturing and challenging environment. My daughter looks forward to her classes every week. It's the best investment in her education.",
@@ -34,9 +34,6 @@ export function Testimonials() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What Our Families Say</h2>
-          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            We're proud of the positive impact we've had on our students and their families.
-          </p>
         </div>
         <Carousel
           opts={{

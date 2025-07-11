@@ -9,8 +9,8 @@ const manrope = Manrope({ subsets: ['latin'], weight: ['400', '500', '600', '700
 export const metadata: Metadata = {
   title: 'Creative Abacus Academy - Master Mental Math',
   description:
-    "Join Creative Abacus Academy to unlock your child's potential with our high-performance abacus coaching. Enhance speed, concentration, and cognitive skills.",
-  keywords: ['abacus', 'mental math', 'education', 'kids learning', 'math coaching'],
+    "Unlock your child's potential with finger abacus, mental calculation, and vedic maths at our two premier branches.",
+  keywords: ['best abacus center', 'best abacus classes', 'best abacus center in Shivamogga', 'best abacus for kids', 'best abacus near me'],
 };
 
 export default function RootLayout({

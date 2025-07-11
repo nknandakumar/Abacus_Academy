@@ -8,49 +8,35 @@ export function About() {
     <section id="about" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl font-extrabold tracking-tighter sm:text-5xl">Skills That Shape Tomorrow</h2>
-            <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-               Learn Essential Life Skills Tailored to Help You Succeed in School, Work, and Life
+            <h2 className="text-3xl font-extrabold tracking-tighter sm:text-5xl">Creative Abacus Academy</h2>
+            <p className="max-w-[900px] mx-auto text-muted-foreground md:text-xl">
+               Creative Abacus Academy, established in 2021 by Founder Anthony Serao and led by Headmaster Nirmala Sunitha Mendonca, is recognized as the best abacus center in Shivamogga. Our ISO‑certified curriculum has empowered 100+ students through structured finger abacus and vedic maths programs.
             </p>
              <Button asChild>
-                <Link href="#courses">Join Now</Link>
+                <Link href="#courses">Explore Our Story</Link>
             </Button>
         </div>
         <div className="grid gap-8 lg:grid-cols-3">
           <Card className="p-6 rounded-3xl flex flex-col items-start bg-[#FFECE5]">
-            <h3 className="text-2xl font-bold mb-4">Join Our Academy To Activate Your Learning</h3>
-             <Button variant="ghost" size="icon" className="mt-auto bg-background rounded-full">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-            </Button>
+            <h3 className="text-2xl font-bold mb-4">Gandhinagar Branch</h3>
+             <p className="text-muted-foreground">2nd Cross, Beside Vidhathri Bhavan, Opp. Arun Ice Cream, Shimoga</p>
             <div className="relative w-full aspect-[4/3] mt-4">
-                <Image src="https://placehold.co/600x450.png" alt="Activate learning" layout="fill" objectFit="cover" className="rounded-2xl" data-ai-hint="student focused"/>
+                <Image src="https://placehold.co/600x450.png" alt="Founder Photo" layout="fill" objectFit="cover" className="rounded-2xl" data-ai-hint="founder portrait"/>
             </div>
           </Card>
           <Card className="p-6 rounded-3xl flex flex-col items-start bg-[#F2F8DE]">
-            <h3 className="text-2xl font-bold mb-4">Join Our Academy To Activate Your Teaching</h3>
-            <Button variant="ghost" size="icon" className="mt-auto bg-background rounded-full">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-            </Button>
+            <h3 className="text-2xl font-bold mb-4">Devraj Aras Badavane Branch</h3>
+             <p className="text-muted-foreground">Somina Koppa, Shivamogga</p>
+
             <div className="relative w-full aspect-[4/3] mt-4">
-                <Image src="https://placehold.co/600x450.png" alt="Activate teaching" layout="fill" objectFit="cover" className="rounded-2xl" data-ai-hint="teacher instructing" />
+                <Image src="https://placehold.co/600x450.png" alt="Headmaster Photo" layout="fill" objectFit="cover" className="rounded-2xl" data-ai-hint="headmaster portrait" />
             </div>
           </Card>
           <Card className="p-6 rounded-3xl flex flex-col items-start bg-[#EBE4FF]">
-            <h3 className="text-2xl font-bold mb-4">Support Your Child's Learning Through Our Academy</h3>
-            <Button variant="ghost" size="icon" className="mt-auto bg-background rounded-full">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-            </Button>
+            <h3 className="text-2xl font-bold mb-4">ISO Certified</h3>
+            <p className="text-muted-foreground">Mon–Sat: 10 AM–6 PM</p>
             <div className="relative w-full aspect-[4/3] mt-4">
-                <Image src="https://placehold.co/600x450.png" alt="Parent with child" layout="fill" objectFit="cover" className="rounded-2xl" data-ai-hint="parent child learning"/>
+                <Image src="https://placehold.co/600x450.png" alt="ISO Certificate" layout="fill" objectFit="cover" className="rounded-2xl" data-ai-hint="certificate document"/>
             </div>
           </Card>
         </div>

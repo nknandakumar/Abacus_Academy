@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 
 const images = [
-  { src: 'https://placehold.co/600x400.png', alt: 'Abacus class in Shivamogga', hint: 'students classroom' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Abacus class Shivamogga', hint: 'students classroom' },
   { src: 'https://placehold.co/400x600.png', alt: 'Child learning abacus in Shivamogga', hint: 'child concentrating' },
   { src: 'https://placehold.co/600x400.png', alt: 'Abacus competition event Shivamogga', hint: 'abacus competition' },
   { src: 'https://placehold.co/600x400.png', alt: 'Happy student with abacus award', hint: 'happy student award' },

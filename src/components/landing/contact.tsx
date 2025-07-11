@@ -16,6 +16,18 @@ export function Contact() {
         <div className="mx-auto w-full max-w-lg">
           <ContactForm />
         </div>
+         <div className="mt-12 text-center space-y-4">
+             <div className="space-y-2">
+                <p>Creative Abacus Academy</p>
+                <p>Gandhinagar: 2nd Cross, Beside Vidhathri Bhavan, Opp. Arun Ice Cream, Shimoga</p>
+                <p>Devraj Aras Badavane: Somina Koppa, Shivamogga</p>
+                <p>📞 96634 44851 | ✉️ info@creativeabacus.com</p>
+                <p>🕒 Mon–Sat: 10 AM–6 PM</p>
+            </div>
+            <Button asChild>
+                <Link href="#">Get Directions on Google Maps</Link>
+            </Button>
+        </div>
       </div>
     </section>
   );
