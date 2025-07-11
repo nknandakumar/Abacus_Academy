@@ -1,13 +1,15 @@
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const images = [
-  { src: 'https://placehold.co/600x400.png', alt: 'Students in a classroom', hint: 'students classroom' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Child concentrating on an abacus', hint: 'child concentrating' },
-  { src: 'https://placehold.co/600x400.png', alt: 'An abacus competition event', hint: 'abacus competition' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Happy student receiving an award', hint: 'happy student award' },
-  { src: 'https://placehold.co/400x600.png', alt: 'A teacher guiding a student', hint: 'teacher guiding' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Group of students with abacuses', hint: 'students group' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Abacus class in Shivamogga', hint: 'students classroom' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Child learning abacus in Shivamogga', hint: 'child concentrating' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Abacus competition event Shivamogga', hint: 'abacus competition' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Happy student with abacus award', hint: 'happy student award' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Teacher guiding student at abacus class', hint: 'teacher guiding' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Students with abacuses in Shivamogga', hint: 'students group' },
 ];
 
 export function Gallery() {
@@ -18,10 +20,10 @@ export function Gallery() {
           <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Gallery</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">A Glimpse Into Our Academy</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            See our students in action and get a feel for our vibrant learning community.
+            Take a glimpse of our vibrant classrooms and student achievements!
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <Card key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <Image
@@ -30,10 +32,15 @@ export function Gallery() {
                 height={400}
                 alt={image.alt}
                 data-ai-hint={image.hint}
-                className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-300"
               />
             </Card>
           ))}
+        </div>
+        <div className="text-center mt-12">
+            <Button asChild size="lg">
+                <Link href="#gallery">View Full Gallery & Videos</Link>
+            </Button>
         </div>
       </div>
     </section>

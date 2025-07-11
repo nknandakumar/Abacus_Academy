@@ -1,5 +1,7 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { ContactForm } from './contact-form';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export function Contact() {
   return (
@@ -7,46 +9,42 @@ export function Contact() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Get in Touch</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Enquiry & Admission Form</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Have questions or want to enroll? Reach out to us! We're here to help.
+            Required Documents: Recent Photo, Aadhar Card, Birth Certificate. Fill out the form below to secure your admission slot.
           </p>
         </div>
-        <div className="mx-auto w-full max-w-5xl grid gap-12 lg:grid-cols-2">
+        <div className="mx-auto w-full max-w-6xl grid gap-12 lg:grid-cols-2">
           <div className="space-y-8">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Contact Information</h3>
-              <p className="text-muted-foreground">Fill out the form or use the details below to connect with us.</p>
+              <p className="text-muted-foreground">Reach out to us at our Shivamogga branches.</p>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Our Academy</h4>
-                  <p className="text-muted-foreground">123 Learning Lane, Knowledge City, 45678</p>
-                </div>
+            <div className="space-y-6">
+              <div className="space-y-2">
+                 <h4 className="font-semibold flex items-center"><MapPin className="w-5 h-5 mr-2 text-primary" />Gandhinagar Branch</h4>
+                 <p className="text-muted-foreground ml-7">2nd Cross, Beside Vidhathri Bhavan, Opp. Arun Ice Cream, Shimoga</p>
               </div>
-              <div className="flex items-start space-x-4">
-                 <div className="bg-primary/10 p-3 rounded-full">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p className="text-muted-foreground">(123) 456-7890</p>
-                </div>
+              <div className="space-y-2">
+                 <h4 className="font-semibold flex items-center"><MapPin className="w-5 h-5 mr-2 text-primary" />Devraj Aras Badavane Branch</h4>
+                 <p className="text-muted-foreground ml-7">Somina Koppa, Shivamogga</p>
               </div>
-              <div className="flex items-start space-x-4">
-                 <div className="bg-primary/10 p-3 rounded-full">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">hello@creativeabacus.com</p>
-                </div>
+               <div className="flex items-center space-x-4">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <p className="text-muted-foreground">96634 44851</p>
+              </div>
+               <div className="flex items-center space-x-4">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <p className="text-muted-foreground">info@creativeabacus.com</p>
+              </div>
+               <div className="flex items-center space-x-4">
+                  <Clock className="w-5 h-5 text-primary" />
+                  <p className="text-muted-foreground">Mon–Sat: 10 AM–6 PM</p>
               </div>
             </div>
+             <Button asChild>
+                <Link href="https://maps.google.com" target="_blank">Get Directions on Google Maps</Link>
+             </Button>
           </div>
           <ContactForm />
         </div>

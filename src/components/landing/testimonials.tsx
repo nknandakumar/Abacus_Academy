@@ -5,18 +5,18 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Sarah L.',
-    role: 'Parent of a 7-year-old',
-    avatar: 'SL',
+    name: 'Parent, Gandhinagar Branch',
+    role: 'Satisfied Parent',
+    avatar: 'P',
     image: 'https://placehold.co/100x100.png',
-    text: "My son's confidence in math has soared since joining. The teachers are fantastic and make learning so much fun. I can't recommend this academy enough!",
+    text: "My daughter’s math speed and confidence skyrocketed after joining Creative Abacus Academy.",
   },
   {
-    name: 'Michael P.',
-    role: 'Parent of two students',
-    avatar: 'MP',
+    name: 'Student, Devraj Aras Badavane',
+    role: 'Happy Student',
+    avatar: 'S',
     image: 'https://placehold.co/100x100.png',
-    text: 'The progress my children have made in just a few months is astounding. Their concentration and calculation speed are incredible. A truly wonderful program.',
+    text: 'The instructors are amazing, and the results are visible!',
   },
   {
     name: 'Emily R.',
@@ -24,13 +24,6 @@ const testimonials = [
     avatar: 'ER',
     image: 'https://placehold.co/100x100.png',
     text: "Creative Abacus Academy provides a nurturing and challenging environment. My daughter looks forward to her classes every week. It's the best investment in her education.",
-  },
-  {
-    name: 'David C.',
-    role: 'Parent of an 11-year-old',
-    avatar: 'DC',
-    image: 'https://placehold.co/100x100.png',
-    text: "I was skeptical at first, but the results speak for themselves. My son's performance in school has improved dramatically, not just in math but in all subjects.",
   },
 ];
 

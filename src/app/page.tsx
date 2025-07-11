@@ -8,6 +8,7 @@ import { Gallery } from '@/components/landing/gallery';
 import { Testimonials } from '@/components/landing/testimonials';
 import { Cta } from '@/components/landing/cta';
 import { Contact } from '@/components/landing/contact';
+import { Faq } from '@/components/landing/faq';
 import { Footer } from '@/components/landing/footer';
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <Testimonials />
         <Cta />
         <Contact />
+        <Faq />
       </main>
       <Footer />
     </div>

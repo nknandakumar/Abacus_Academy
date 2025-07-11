@@ -1,26 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, BookOpen, TrendingUp, Smile } from 'lucide-react';
+import { Medal, BookOpen, TrendingUp, Users, MapPin, Brain } from 'lucide-react';
 
 const features = [
   {
-    icon: <Users className="w-10 h-10 text-primary" />,
-    title: 'Expert Instructors',
-    description: 'Our certified teachers have years of experience in abacus and child education.',
+    icon: <Medal className="w-10 h-10 text-primary" />,
+    title: 'ISO-Certified Excellence',
+    description: 'Excellence in Abacus & Vedic Maths.',
   },
   {
     icon: <BookOpen className="w-10 h-10 text-primary" />,
-    title: 'Optimized Curriculum',
-    description: 'A structured, level-based program designed for high-performance learning and retention.',
+    title: 'Levels 0–8 Curriculum',
+    description: 'From Beginner to Advanced Mental Calculation.',
   },
   {
     icon: <TrendingUp className="w-10 h-10 text-primary" />,
-    title: 'Proven Results',
-    description: 'Our students consistently show dramatic improvements in speed, accuracy, and confidence.',
+    title: 'Championship Prep',
+    description: 'Regional & National Finger Abacus Exams.',
   },
   {
-    icon: <Smile className="w-10 h-10 text-primary" />,
-    title: 'Fun Learning',
-    description: 'We make learning an enjoyable experience with interactive activities and games.',
+    icon: <Users className="w-10 h-10 text-primary" />,
+    title: 'Expert Trainers',
+    description: 'Over 15 Years of Experience.',
+  },
+  {
+    icon: <MapPin className="w-10 h-10 text-primary" />,
+    title: 'Two Convenient Locations',
+    description: 'Located in Shivamogga.',
+  },
+  {
+    icon: <Brain className="w-10 h-10 text-primary" />,
+    title: 'Holistic Brain Development',
+    description: 'Focus, Memory & Confidence.',
   },
 ];
 
@@ -35,7 +45,7 @@ export function WhyChooseUs() {
             Discover what makes our academy the premier choice for abacus and mental math coaching.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card key={feature.title} className="text-center hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="items-center">

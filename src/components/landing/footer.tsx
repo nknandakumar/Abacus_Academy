@@ -12,16 +12,19 @@ export function Footer() {
             <span className="font-bold">Creative Abacus Academy</span>
           </Link>
           <p className="text-muted-foreground text-sm">
-            Nurturing young minds for a brighter future.
+            The Best Abacus Center in Shivamogga
           </p>
         </div>
         <div className="flex flex-col items-center">
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
+                <li><Link href="#home" className="text-sm text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link href="#about" className="text-sm text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link href="#courses" className="text-sm text-muted-foreground hover:text-primary">Courses</Link></li>
                 <li><Link href="#gallery" className="text-sm text-muted-foreground hover:text-primary">Gallery</Link></li>
+                <li><Link href="#testimonials" className="text-sm text-muted-foreground hover:text-primary">Testimonials</Link></li>
                 <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
+                <li><Link href="#faq" className="text-sm text-muted-foreground hover:text-primary">FAQ</Link></li>
             </ul>
         </div>
         <div className="flex flex-col items-center md:items-end">
@@ -41,6 +44,7 @@ export function Footer() {
       </div>
       <div className="container mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
         <p>&copy; {year} Creative Abacus Academy. All Rights Reserved.</p>
+        <p className="text-xs mt-2">Crafted by [Your Name/Agency], 15+ Years in Web Copywriting & SEO</p>
       </div>
     </footer>
   );
