@@ -6,7 +6,7 @@ import { Star } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section id="home" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="home" className="w-full py-12 bg-[#F8F8F8] md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-6 text-center">
           <Badge variant="outline" className="py-1 px-4 rounded-full border-orange-200 bg-orange-50">
