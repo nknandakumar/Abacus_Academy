@@ -40,7 +40,11 @@ export function WhyChooseUs() {
     <section id="why-us" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6 text-center">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="text-3xl font-extrabold tracking-tighter sm:text-5xl">Why Choose Us?</h2>
+          <h2 className="text-3xl font-extrabold tracking-tighter sm:text-5xl">Why Choose Creative Abacus Academy?</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Discover what makes us the <strong className="text-primary">best abacus center in Shivamogga</strong> with{" "}
+            <strong >ISO certification</strong> and proven track record.
+          </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
